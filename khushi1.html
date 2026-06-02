@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 4th Anniversary ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="anniversary-page">
+
+<div id="heart-container"></div>
+
+<div class="anniversary-box">
+
+    <h3 class="small-text">❤️ FOR MY LOVE ❤️</h3>
+
+    <h1 class="main-title">
+        Happy 4th year love Anniversary 
+    </h1>
+
+    <h2 class="simran-name">
+        BBY ❤️
+    </h2>
+
+    <p class="anniversary-message">
+        Four beautiful years, countless memories,
+        endless laughter, and a love that grows
+        stronger every day.
+    </p>
+
+    <p class="anniversary-message">
+        Thank you for being the most special part
+        of my life.
+    </p>
+
+    <button class="next-btn"
+        onclick="window.location.href='khushi2.html'">
+        Open My Heart ❤️
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+for(let i=0;i<60;i++){
+
+    let heart=document.createElement("div");
+
+    heart.classList.add("falling-heart");
+
+    heart.innerHTML="❤️";
+
+    heart.style.left=Math.random()*100+"vw";
+
+    heart.style.animationDuration=
+    (Math.random()*5+4)+"s";
+
+    heart.style.fontSize=
+    (Math.random()*25+20)+"px";
+
+    heart.style.animationDelay=
+    Math.random()*5+"s";
+
+    document.getElementById("heart-container")
+    .appendChild(heart);
+}
+</script>
+
+</body>
+</html>

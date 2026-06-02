@@ -1,0 +1,103 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Love Letter ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="message-page">
+
+<div id="love-hearts"></div>
+
+<div class="letter-box">
+
+    <h1>💌 A Letter For Simran 💌</h1>
+
+    <div class="typewriter">
+        <p id="loveText"></p>
+    </div>
+
+    <button class="next-btn"
+    onclick="window.location.href='khushi3.html'">
+        See Our Memories ❤️
+    </button>
+
+</div>
+
+<script>
+
+const message = `
+Dear Simran,
+
+Happy 4th Anniversary, My Love ❤️
+
+Every moment with you has become a beautiful memory that I will always cherish.
+
+You are the reason behind my smile, my happiness, and the countless beautiful days in my life.
+
+These four years have been filled with love, laughter, care, and unforgettable memories.
+
+No matter where life takes us, my heart will always belong to you.
+
+Thank you for being my best friend, my biggest support, and the most beautiful part of my life.
+
+I promise to continue loving you, respecting you, and creating wonderful memories together.
+
+I am always with you forever and ever no matter what the situation or condition i am always yours.I am just wanna be yours.
+
+I love you so so so so so so so so so so so so much my happiness forever and ever...❤️❤️❤️
+
+Forever Yours,
+
+❤️ Kanhu ❤️
+`;
+
+let i = 0;
+
+function typeWriter() {
+
+    if(i < message.length){
+
+        document.getElementById("loveText").innerHTML +=
+        message.charAt(i);
+
+        i++;
+
+        setTimeout(typeWriter, 40);
+    }
+}
+
+typeWriter();
+
+for(let i=0;i<40;i++){
+
+    let heart = document.createElement("div");
+
+    heart.classList.add("floating-heart");
+
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random()*100 + "vw";
+
+    heart.style.animationDuration =
+    (Math.random()*6+4)+"s";
+
+    heart.style.fontSize =
+    (Math.random()*20+15)+"px";
+
+    heart.style.animationDelay =
+    Math.random()*5+"s";
+
+    document.getElementById("love-hearts")
+    .appendChild(heart);
+}
+
+</script>
+
+</body>
+</html>
+```
